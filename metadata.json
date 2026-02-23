@@ -1,0 +1,5 @@
+{
+  "name": "LifeCalc AI",
+  "description": "Serverless life-estimation calculator PWA with glassmorphism UI. Estimate health, wealth, and career growth projections.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --color-teal-deep: #0f4c5c;
+  --color-cyan-vibrant: #00e5ff;
+  --color-amber-vibrant: #ffaa00;
+  --color-violet-vibrant: #9c4aff;
+}
+
+@layer base {
+  body {
+    @apply bg-teal-deep text-white overflow-x-hidden min-h-screen;
+    background: linear-gradient(135deg, #0f4c5c 0%, #00e5ff 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 229, 255, 0.3);
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 229, 255, 0.3);
+    border-radius: 24px;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px #00e5ff;
+  }
+
+  .btn-amber {
+    background: linear-gradient(to right, #ffaa00, #ffcc00);
+    color: #0f4c5c;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  
+  .btn-amber:active {
+    transform: scale(0.95);
+  }
+}
+
+/* Custom scrollbar for glass feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
